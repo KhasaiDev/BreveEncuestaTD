@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.surveydonkeytd.view.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_firstQuestionFragment"
+            app:destination="@id/firstQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstQuestionFragment"
+        android:name="com.example.surveydonkeytd.view.quest1.FirstQuestionFragment"
+        android:label="FirstQuestionFragment" >
+        <action
+            android:id="@+id/action_firstQuestionFragment_to_secondQuestionFragment"
+            app:destination="@id/secondQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondQuestionFragment"
+        android:name="com.example.surveydonkeytd.view.quest2.SecondQuestionFragment"
+        android:label="SecondQuestionFragment" >
+        <action
+            android:id="@+id/action_secondQuestionFragment_to_thirdQuestionFragment"
+            app:destination="@id/thirdQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestionFragment"
+        android:name="com.example.surveydonkeytd.view.quest3.ThirdQuestionFragment"
+        android:label="ThirdQuestionFragment" >
+        <action
+            android:id="@+id/action_thirdQuestionFragment_to_forthFragment"
+            app:destination="@id/forthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forthFragment"
+        android:name="com.example.surveydonkeytd.view.quest4.ForthFragment"
+        android:label="ForthFragment" >
+        <action
+            android:id="@+id/action_forthFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.surveydonkeytd.view.end.EndFragment"
+        android:label="EndFragment" />
+</navigation>
